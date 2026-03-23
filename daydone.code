@@ -1,2 +1,5 @@
-First code,
-second code,
+public class App {
+    public static void main(String[] args) {
+        System.out.println("Hello from Nana's CI/CD pipeline!");
+    }
+}
