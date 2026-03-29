@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frontend App</title>
+</head>
+<body>
+    <h2>Frontend Application</h2>
+    <button onclick="callBackend()">Call Backend</button>
+    <p id="output"></p>
+
+    <script>
+        function callBackend() {
+            fetch("http://107.23.155.72:5000")
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById("output").innerHTML = data;
+                })
+                .catch(err => {
+                    document.getElementById("output").innerHTML = "Error calling backend";
+                    console.log(err);
+                });
+        }
+    </script>
+</body>
+</html>
